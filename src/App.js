@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAuthenticator } from 'aws-amplify-react'
 import { css } from 'glamor'
 
 import Form from './components/Form'
@@ -102,4 +103,4 @@ const styles = {
   }
 }
 
-export default App;
+export default withAuthenticator(App, { includeGreetings: true })
